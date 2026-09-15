@@ -20,7 +20,7 @@ const developers = [
         username: "techgirl-shreya200",
         age: 16,
         gender: "She/her",
-        email: "None",
+        email: "bal.shreya2010@gmail.com",
         website: "https://orchid-butter-20956777.figma.site/",
         twitter: "https://x.com/tech_Shreya_200",
         github: "https://github.com/techgirl-shreya200",
