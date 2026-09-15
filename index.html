@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevList — Discover Developers</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container header-content">
+            <h1 class="logo">Dev<span>List</span></h1>
+            <button id="openModalBtn" class="btn-primary">Add your profile</button>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="intro">
+            <h2>Discover Developers Worldwide</h2>
+            <p>Explore profiles of talented developers from different backgrounds and stacks.</p>
+        </div>
+
+    
+        <div class="filter-panel">
+            <div class="filter-row">
+               
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input 
+                        type="text" 
+                        id="searchInput" 
+                        placeholder="Search by skill (python, react, rust...)"
+                        autocomplete="off"
+                    >
+                    <button id="clearSearch" class="clear-search" title="Clear">&times;</button>
+                </div>
+
+               
+                <select id="sortSelect" class="sort-select">
+                    <option value="default">Sort: Default</option>
+                    <option value="name-asc">Name (A → Z)</option>
+                    <option value="name-desc">Name (Z → A)</option>
+                    <option value="age-asc">Age (youngest first)</option>
+                    <option value="age-desc">Age (oldest first)</option>
+                </select>
+            </div>
+
+           
+            <div class="quick-filters" id="quickFilters">
+                <button class="filter-chip active" data-filter="all">All</button>
+                <button class="filter-chip" data-filter="python">Python</button>
+                <button class="filter-chip" data-filter="javascript">JavaScript</button>
+                <button class="filter-chip" data-filter="typescript">TypeScript</button>
+                <button class="filter-chip" data-filter="react">React</button>
+                <button class="filter-chip" data-filter="rust">Rust</button>
+                <button class="filter-chip" data-filter="go">Go</button>
+                <button class="filter-chip" data-filter="java">Java</button>
+                <button class="filter-chip" data-filter="swift">Swift</button>
+                <button class="filter-chip" data-filter="kotlin">Kotlin</button>
+            </div>
+
+          
+            <div class="results-info" id="resultsInfo">
+                Showing <strong>0</strong> developers
+            </div>
+        </div>
+
+       
+        <div class="dev-grid" id="devGrid"></div>
+
+       
+        <div class="empty-state" id="emptyState" style="display: none;">
+            <i class="fas fa-search"></i>
+            <h3>No developers found</h3>
+            <p>Try a different skill or clear the filters.</p>
+            <button id="resetFilters" class="btn-primary">Reset Filters</button>
+        </div>
+    </main>
+
+   
+    <div id="modalOverlay" class="modal-overlay">
+        <div class="modal">
+            <div class="modal-header">
+                <h3>Add your profile to this page</h3>
+                <button id="closeModalBtn" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Before adding your profile, please read the requirements at <a href="https://github.com/Yrashka200/Devlist/issues/1" class="link">DevList/Guidelines</a> first.</p>
+                <p>If your profile meets every requirement, you can submit your info following the provided steps!</p>
+                <a href="https://github.com/Yrashka200/Devlist/blob/main/README.md" target="_blank" class="github-btn">
+                    <i class="fab fa-github"></i> DevList/Guidelines
+                </a>
+            </div>
+        </div>
+    </div>
+
+   
+    <div id="profileModalOverlay" class="modal-overlay">
+        <div class="modal profile-modal">
+            <div class="modal-header">
+                <h3>Developer Profile</h3>
+                <button id="closeProfileModalBtn" class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body" id="profileModalBody"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
