@@ -22,8 +22,8 @@ const developers = [
         gender: "She/her",
         email: "bal.shreya2010@gmail.com",
         website: "https://orchid-butter-20956777.figma.site/",
-        twitter: "https://x.com/tech_Shreya_200",
-        github: "https://github.com/techgirl-shreya200",
+        twitter: "https://x.com/Shreyacodess20",
+        github: "https://github.com/Shreyacodess20",
         avatarLetter: "S",
         bio: "A class 11 student navigating the cosmos of code, cybersecurity, and artificial intelligence — one CTF at a time",
         stack: ["python", "c", "c++", "javascript", "html", "css", "cybersecurity"]
